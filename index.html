@@ -1532,19 +1532,19 @@
 
       let recaptchaToken = '';
       try {
-        await new Promise((resolve) => {
-          grecaptcha.enterprise.ready(async () => {
-            recaptchaToken = await grecaptcha.enterprise.execute('YOUR_RECAPTCHA_SITE_KEY', { action: 'submit' });
-            resolve();
-          });
-        });
-        if (!recaptchaToken) {
-          btnEl.innerHTML = originalText;
-          btnEl.disabled = false;
-          return;
+        if (typeof grecaptcha !== 'undefined' && grecaptcha.enterprise) {
+          await Promise.race([
+            new Promise((resolve) => {
+              grecaptcha.enterprise.ready(async () => {
+                recaptchaToken = await grecaptcha.enterprise.execute('YOUR_RECAPTCHA_SITE_KEY', { action: 'submit' });
+                resolve();
+              });
+            }),
+            new Promise(resolve => setTimeout(resolve, 3000))
+          ]);
         }
       } catch (e) {
-        console.warn('reCAPTCHA error:', e);
+        console.warn('reCAPTCHA skipped:', e);
       }
 
       btnEl.innerHTML = 'Sending…';
