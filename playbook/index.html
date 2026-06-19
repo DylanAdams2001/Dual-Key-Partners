@@ -3,25 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Dual Key Investment Playbook — Dual Income Plus</title>
+  <title>The Dual Key Investment Guide — Dual Key Partners</title>
   <link rel="icon" href="../assets/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --teal:    #2ABDD8;
-      --lime:    #B1D133;
-      --indigo:  #393B65;
-      --navy:    #1C2245;
-      --bg:      #F3F3F3;
-      --border:  #e0e0e0;
-      --white:   #FFFFFF;
-      --font-h:  'Plus Jakarta Sans', Arial, sans-serif;
-      --font-s:  'Open Sans', Arial, sans-serif;
+      --navy:      #1A2C50;
+      --navy-deep: #101E3A;
+      --blue:      #1E6098;
+      --blue-lt:   #e8eef6;
+      --gold:      #C98A25;
+      --bg:        #F4F3EF;
+      --border:    #E0DDD6;
+      --white:     #FFFFFF;
+      --font-h:    'Montserrat', Arial, sans-serif;
+      --font-s:    'Inter', Arial, sans-serif;
     }
 
     html { -webkit-font-smoothing: antialiased; }
@@ -40,12 +41,12 @@
       margin: 0 auto;
       padding: 0 0 80px;
       background: var(--white);
-      box-shadow: 0 0 40px rgba(28,34,69,0.10);
+      box-shadow: 0 0 40px rgba(16,30,58,0.12);
     }
 
     /* ── COVER ──────────────────────────────────────── */
     .cover {
-      background: linear-gradient(145deg, var(--teal) 0%, #1f97b5 45%, var(--indigo) 100%);
+      background: linear-gradient(145deg, #1E6098 0%, #163C6E 50%, #101E3A 100%);
       padding: 64px 60px 56px;
       position: relative;
       overflow: hidden;
@@ -54,8 +55,8 @@
       content: '';
       position: absolute;
       inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 8 L52 26 L52 52 L8 52 L8 26 Z' fill='none' stroke='rgba(255,255,255,0.06)' stroke-width='1.5'/%3E%3Cpath d='M22 52 L22 36 L38 36 L38 52' fill='none' stroke='rgba(255,255,255,0.06)' stroke-width='1.5'/%3E%3C/svg%3E");
-      background-size: 60px 60px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Crect x='14' y='14' width='28' height='28' rx='2' fill='none' stroke='rgba(255,255,255,0.04)' stroke-width='1.5' transform='rotate(45 28 28)'/%3E%3C/svg%3E");
+      background-size: 56px 56px;
     }
     .cover-logo {
       display: flex;
@@ -64,28 +65,30 @@
       margin-bottom: 52px;
       position: relative;
     }
-    .cover-logo img {
-      height: 44px;
-      width: auto;
+    .cover-logo img { height: 44px; width: auto; }
+    .cover-logo-mark {
+      width: 44px; height: 44px; flex-shrink: 0;
     }
     .cover-logo-text {
       font-family: var(--font-h);
       font-size: 18px;
-      font-weight: 700;
+      font-weight: 800;
       color: var(--white);
       letter-spacing: 0.3px;
+      text-transform: uppercase;
     }
+    .cover-logo-text span { color: var(--gold); }
     .cover-logo-tag {
       font-family: var(--font-s);
       font-size: 11px;
-      color: rgba(255,255,255,0.7);
+      color: rgba(255,255,255,0.65);
       letter-spacing: 2px;
       text-transform: uppercase;
     }
     .cover-badge {
       display: inline-block;
-      background: var(--lime);
-      color: var(--navy);
+      background: var(--gold);
+      color: var(--white);
       font-family: var(--font-h);
       font-size: 11px;
       font-weight: 700;
@@ -99,7 +102,7 @@
     .cover h1 {
       font-family: var(--font-h);
       font-size: 38px;
-      font-weight: 800;
+      font-weight: 900;
       color: var(--white);
       line-height: 1.15;
       letter-spacing: -0.5px;
@@ -122,7 +125,7 @@
       position: relative;
     }
     .cover-stat {
-      border-left: 3px solid var(--lime);
+      border-left: 3px solid var(--gold);
       padding-left: 16px;
     }
     .cover-stat-num {
@@ -153,7 +156,7 @@
       font-weight: 700;
       letter-spacing: 2.5px;
       text-transform: uppercase;
-      color: var(--teal);
+      color: var(--blue);
       margin-bottom: 10px;
     }
 
@@ -161,7 +164,7 @@
       font-family: var(--font-h);
       font-size: 26px;
       font-weight: 800;
-      color: var(--indigo);
+      color: var(--navy);
       line-height: 1.25;
       margin-bottom: 16px;
       letter-spacing: -0.3px;
@@ -171,7 +174,7 @@
       font-family: var(--font-h);
       font-size: 17px;
       font-weight: 700;
-      color: var(--indigo);
+      color: var(--navy);
       margin-bottom: 10px;
       margin-top: 28px;
     }
@@ -188,7 +191,7 @@
       font-family: var(--font-h);
       font-size: 19px;
       font-weight: 600;
-      color: var(--indigo);
+      color: var(--navy);
       line-height: 1.5;
       margin-bottom: 20px;
     }
@@ -205,12 +208,12 @@
       padding: 24px 22px;
     }
     .compare-box.standard {
-      background: #f8f8fb;
+      background: #f8f8fa;
       border: 1px solid var(--border);
     }
     .compare-box.dual {
-      background: linear-gradient(135deg, #e8f8fb 0%, #f0faf5 100%);
-      border: 2px solid var(--teal);
+      background: linear-gradient(135deg, var(--blue-lt) 0%, #edf2f9 100%);
+      border: 2px solid var(--blue);
     }
     .compare-box-label {
       font-family: var(--font-h);
@@ -221,12 +224,12 @@
       margin-bottom: 14px;
     }
     .compare-box.standard .compare-box-label { color: #999; }
-    .compare-box.dual .compare-box-label { color: var(--teal); }
+    .compare-box.dual .compare-box-label { color: var(--blue); }
     .compare-box h4 {
       font-family: var(--font-h);
       font-size: 16px;
       font-weight: 700;
-      color: var(--indigo);
+      color: var(--navy);
       margin-bottom: 12px;
     }
     .compare-item {
@@ -238,8 +241,7 @@
       color: var(--navy);
     }
     .compare-item .icon {
-      width: 16px;
-      height: 16px;
+      width: 16px; height: 16px;
       border-radius: 50%;
       flex-shrink: 0;
       display: flex;
@@ -249,8 +251,8 @@
       font-weight: 700;
       margin-top: 2px;
     }
-    .compare-box.standard .icon { background: #e0e0e0; color: #888; }
-    .compare-box.dual .icon { background: var(--lime); color: var(--navy); }
+    .compare-box.standard .icon { background: #e0ddd6; color: #888; }
+    .compare-box.dual .icon { background: var(--gold); color: var(--white); }
     .compare-income {
       margin-top: 16px;
       padding-top: 14px;
@@ -263,7 +265,7 @@
       font-weight: 800;
     }
     .compare-box.standard .compare-income-num { color: var(--navy); }
-    .compare-box.dual .compare-income-num { color: var(--teal); }
+    .compare-box.dual .compare-income-num { color: var(--blue); }
     .compare-income-note { font-size: 11px; color: #888; margin-top: 2px; }
 
     /* ── NUMBERS STRIP ──────────────────────────────── */
@@ -286,7 +288,7 @@
       font-family: var(--font-h);
       font-size: 28px;
       font-weight: 800;
-      color: var(--teal);
+      color: var(--blue);
       line-height: 1;
       margin-bottom: 6px;
     }
@@ -308,10 +310,9 @@
       align-items: flex-start;
     }
     .process-num {
-      width: 36px;
-      height: 36px;
+      width: 36px; height: 36px;
       border-radius: 50%;
-      background: var(--teal);
+      background: var(--blue);
       color: var(--white);
       font-family: var(--font-h);
       font-size: 14px;
@@ -326,7 +327,7 @@
       font-family: var(--font-h);
       font-size: 15px;
       font-weight: 700;
-      color: var(--indigo);
+      color: var(--navy);
       margin-bottom: 4px;
     }
     .process-desc {
@@ -336,10 +337,7 @@
     }
 
     /* ── CHECKLIST ──────────────────────────────────── */
-    .checklist {
-      list-style: none;
-      margin: 16px 0;
-    }
+    .checklist { list-style: none; margin: 16px 0; }
     .checklist li {
       display: flex;
       align-items: flex-start;
@@ -350,20 +348,19 @@
     }
     .checklist li::before {
       content: '';
-      width: 18px;
-      height: 18px;
+      width: 18px; height: 18px;
       border-radius: 50%;
-      background: var(--lime);
+      background: var(--gold);
       flex-shrink: 0;
       margin-top: 1px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M4 9l3.5 3.5L14 6' stroke='%231C2245' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M4 9l3.5 3.5L14 6' stroke='white' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
       background-size: contain;
     }
 
     /* ── HIGHLIGHT BOX ──────────────────────────────── */
     .highlight-box {
-      background: linear-gradient(135deg, #e8f8fb 0%, #f0faf5 100%);
-      border-left: 4px solid var(--teal);
+      background: var(--blue-lt);
+      border-left: 4px solid var(--gold);
       border-radius: 0 6px 6px 0;
       padding: 22px 24px;
       margin: 24px 0;
@@ -372,7 +369,7 @@
       font-family: var(--font-h);
       font-size: 16px;
       font-weight: 600;
-      color: var(--indigo);
+      color: var(--navy);
       margin: 0;
       line-height: 1.5;
     }
@@ -385,7 +382,7 @@
       font-size: 14px;
     }
     .income-table th {
-      background: var(--indigo);
+      background: var(--navy);
       color: var(--white);
       font-family: var(--font-h);
       font-size: 12px;
@@ -403,19 +400,18 @@
     }
     .income-table td:last-child { text-align: right; font-weight: 600; }
     .income-table tr:last-child td { border-bottom: none; }
+    .income-table tr:nth-child(even) td { background: #fafaf9; }
     .income-table tr.total td {
-      background: #f0fdf4;
+      background: var(--blue-lt);
       font-family: var(--font-h);
       font-weight: 700;
-      color: var(--indigo);
+      color: var(--navy);
       font-size: 15px;
     }
-    .income-table tr:nth-child(even) td { background: #fafafa; }
-    .income-table tr.total td { background: #e8f8fb; }
 
     /* ── CALLOUT ────────────────────────────────────── */
     .callout {
-      background: var(--indigo);
+      background: var(--navy);
       border-radius: 8px;
       padding: 28px 32px;
       margin: 28px 0;
@@ -423,12 +419,7 @@
       gap: 20px;
       align-items: flex-start;
     }
-    .callout-icon {
-      font-size: 26px;
-      flex-shrink: 0;
-      line-height: 1;
-    }
-    .callout-body {}
+    .callout-icon { font-size: 26px; flex-shrink: 0; line-height: 1; }
     .callout-title {
       font-family: var(--font-h);
       font-size: 16px;
@@ -438,7 +429,7 @@
     }
     .callout-text {
       font-size: 14px;
-      color: rgba(255,255,255,0.8);
+      color: rgba(255,255,255,0.78);
       line-height: 1.6;
     }
 
@@ -450,16 +441,15 @@
       margin: 24px 0;
     }
     .finance-card {
-      background: #f8f8fb;
+      background: #f8f8fa;
       border: 1px solid var(--border);
       border-radius: 6px;
       padding: 20px;
     }
     .finance-card-icon {
-      width: 38px;
-      height: 38px;
+      width: 38px; height: 38px;
       border-radius: 8px;
-      background: var(--teal);
+      background: var(--blue);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -469,7 +459,7 @@
       font-family: var(--font-h);
       font-size: 14px;
       font-weight: 700;
-      color: var(--indigo);
+      color: var(--navy);
       margin-bottom: 6px;
     }
     .finance-card p {
@@ -480,7 +470,7 @@
 
     /* ── CTA PAGE ───────────────────────────────────── */
     .cta-page {
-      background: linear-gradient(145deg, var(--teal) 0%, #1f97b5 45%, var(--indigo) 100%);
+      background: linear-gradient(145deg, #1E6098 0%, #163C6E 50%, #101E3A 100%);
       padding: 64px 60px;
       text-align: center;
       position: relative;
@@ -490,13 +480,13 @@
       content: '';
       position: absolute;
       inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 8 L52 26 L52 52 L8 52 L8 26 Z' fill='none' stroke='rgba(255,255,255,0.06)' stroke-width='1.5'/%3E%3Cpath d='M22 52 L22 36 L38 36 L38 52' fill='none' stroke='rgba(255,255,255,0.06)' stroke-width='1.5'/%3E%3C/svg%3E");
-      background-size: 60px 60px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Crect x='14' y='14' width='28' height='28' rx='2' fill='none' stroke='rgba(255,255,255,0.04)' stroke-width='1.5' transform='rotate(45 28 28)'/%3E%3C/svg%3E");
+      background-size: 56px 56px;
     }
     .cta-page > * { position: relative; }
     .cta-eyebrow {
       display: inline-block;
-      background: rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.13);
       color: var(--white);
       font-family: var(--font-h);
       font-size: 11px;
@@ -507,11 +497,7 @@
       border-radius: 20px;
       margin-bottom: 20px;
     }
-    .cta-page h2 {
-      color: var(--white);
-      font-size: 30px;
-      margin-bottom: 14px;
-    }
+    .cta-page h2 { color: var(--white); font-size: 30px; margin-bottom: 14px; }
     .cta-page p {
       color: rgba(255,255,255,0.85);
       font-size: 16px;
@@ -520,8 +506,8 @@
     }
     .cta-btn {
       display: inline-block;
-      background: var(--lime);
-      color: var(--navy);
+      background: var(--gold);
+      color: var(--white);
       font-family: var(--font-h);
       font-size: 14px;
       font-weight: 800;
@@ -534,10 +520,7 @@
       transition: opacity 0.2s;
     }
     .cta-btn:hover { opacity: 0.88; }
-    .cta-note {
-      font-size: 13px;
-      color: rgba(255,255,255,0.6);
-    }
+    .cta-note { font-size: 13px; color: rgba(255,255,255,0.55); }
     .cta-bullets {
       display: flex;
       justify-content: center;
@@ -554,11 +537,10 @@
     }
     .cta-bullet::before {
       content: '✓';
-      width: 18px;
-      height: 18px;
+      width: 18px; height: 18px;
       border-radius: 50%;
-      background: var(--lime);
-      color: var(--navy);
+      background: var(--gold);
+      color: var(--white);
       font-size: 10px;
       font-weight: 800;
       display: flex;
@@ -569,7 +551,7 @@
 
     /* ── FOOTER STRIP ───────────────────────────────── */
     .footer-strip {
-      background: var(--indigo);
+      background: var(--navy-deep);
       padding: 18px 60px;
       display: flex;
       justify-content: space-between;
@@ -581,70 +563,102 @@
       font-size: 13px;
       font-weight: 700;
       color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
-    .footer-tagline {
-      font-size: 12px;
-      color: rgba(255,255,255,0.55);
-    }
-    .footer-url {
-      font-size: 12px;
-      color: rgba(255,255,255,0.55);
-      text-decoration: none;
-    }
+    .footer-brand span { color: var(--gold); }
+    .footer-tagline { font-size: 12px; color: rgba(255,255,255,0.5); }
+    .footer-url { font-size: 12px; color: rgba(255,255,255,0.5); text-decoration: none; }
 
     /* ── PAGE DIVIDER ───────────────────────────────── */
-    .divider {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin: 32px 0;
-    }
+    .divider { display: flex; align-items: center; gap: 14px; margin: 32px 0; }
     .divider-line { flex: 1; height: 1px; background: var(--border); }
-    .divider-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); }
+    .divider-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
 
     /* ── QUOTE PULL ─────────────────────────────────── */
-    .pull-quote {
-      border-left: 4px solid var(--lime);
-      padding: 6px 20px;
-      margin: 24px 0;
-    }
+    .pull-quote { border-left: 4px solid var(--gold); padding: 6px 20px; margin: 24px 0; }
     .pull-quote p {
       font-family: var(--font-h);
       font-size: 18px;
       font-weight: 600;
-      color: var(--indigo);
+      color: var(--navy);
       font-style: italic;
       line-height: 1.5;
     }
+
+    /* ── DISCLAIMER BOX ─────────────────────────────── */
+    .disclaimer-box {
+      background: #f8f7f4;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 14px 18px;
+      font-size: 12px;
+      line-height: 1.65;
+      color: #6b7280;
+      margin-bottom: 28px;
+    }
+    .disclaimer-box strong { color: var(--navy); }
+
+    /* ── TABLE NOTE ─────────────────────────────────── */
+    .table-note {
+      font-size: 11.5px;
+      color: #6b7280;
+      line-height: 1.6;
+      margin-top: -12px;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    /* ── DISCLAIMER PAGE ────────────────────────────── */
+    .disclaimer-page {
+      padding: 40px 60px;
+      border-bottom: 1px solid var(--border);
+      background: #f8f7f4;
+    }
+    .disclaimer-page h3 {
+      font-family: var(--font-h);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      margin-top: 0;
+    }
+    .disclaimer-page p {
+      font-size: 12px;
+      line-height: 1.75;
+      color: #6b7280;
+      margin-bottom: 10px;
+    }
+    .disclaimer-page p:last-child { margin-bottom: 0; }
 
     /* ── DOWNLOAD BAR ───────────────────────────────── */
     .dl-bar {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: var(--indigo);
+      background: var(--navy);
       padding: 12px 60px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 16px;
-      box-shadow: 0 2px 12px rgba(28,34,69,0.25);
+      box-shadow: 0 2px 12px rgba(16,30,58,0.28);
     }
     .dl-bar-text {
       font-family: var(--font-h);
       font-size: 13px;
       font-weight: 600;
-      color: rgba(255,255,255,0.8);
+      color: rgba(255,255,255,0.75);
     }
-    .dl-bar-text strong {
-      color: var(--white);
-    }
+    .dl-bar-text strong { color: var(--white); }
     .dl-btn {
       display: flex;
       align-items: center;
       gap: 8px;
-      background: var(--lime);
-      color: var(--navy);
+      background: var(--gold);
+      color: var(--white);
       font-family: var(--font-h);
       font-size: 12px;
       font-weight: 800;
@@ -665,10 +679,7 @@
     @media print {
       body { background: white; }
       .dl-bar { display: none !important; }
-      .screen-wrap {
-        box-shadow: none;
-        max-width: 100%;
-      }
+      .screen-wrap { box-shadow: none; max-width: 100%; }
       .cover {
         page-break-after: always;
         -webkit-print-color-adjust: exact;
@@ -679,17 +690,9 @@
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
-      .page {
-        page-break-inside: avoid;
-        padding: 40px 60px;
-      }
-      .callout,
-      .highlight-box,
-      .numbers-strip,
-      .compare-grid,
-      .finance-grid,
-      .income-table,
-      .process-list {
+      .page { page-break-inside: avoid; padding: 40px 60px; }
+      .callout, .highlight-box, .numbers-strip,
+      .compare-grid, .finance-grid, .income-table, .process-list {
         page-break-inside: avoid;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
@@ -698,6 +701,7 @@
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
+      .disclaimer-page { page-break-inside: avoid; padding: 32px 60px; }
       a { text-decoration: none; color: inherit; }
     }
 
@@ -705,7 +709,7 @@
     @media (max-width: 640px) {
       .dl-bar { padding: 10px 20px; }
       .dl-bar-text { display: none; }
-      .cover, .page, .cta-page, .footer-strip { padding-left: 24px; padding-right: 24px; }
+      .cover, .page, .cta-page, .footer-strip, .disclaimer-page { padding-left: 24px; padding-right: 24px; }
       .compare-grid, .finance-grid { grid-template-columns: 1fr; }
       .numbers-strip { grid-template-columns: 1fr; }
       .cover h1 { font-size: 26px; }
@@ -720,7 +724,7 @@
 
   <!-- ══ DOWNLOAD BAR ═══════════════════════════════════════════════ -->
   <div class="dl-bar">
-    <div class="dl-bar-text"><strong>The Dual Key Investment Playbook</strong> — Dual Income Plus<sup style="font-size:9px">®</sup></div>
+    <div class="dl-bar-text"><strong>The Dual Key Investment Guide</strong> — Dual Key Partners</div>
     <button class="dl-btn" onclick="window.print()">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
@@ -734,15 +738,22 @@
   <!-- ══ COVER ══════════════════════════════════════════════════════ -->
   <div class="cover">
     <div class="cover-logo">
-      <img src="../assets/logo.png" alt="Dual Income Plus" onerror="this.style.display='none'" />
+      <img src="../assets/logo.png" alt="Dual Key Partners" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+      <svg class="cover-logo-mark" style="display:none" viewBox="0 0 44 44" fill="none">
+        <rect x="2" y="18" width="17" height="22" rx="1.5" fill="#1E6098"/>
+        <rect x="25" y="18" width="17" height="22" rx="1.5" fill="#C98A25"/>
+        <path d="M1 20L22 6L43 20" stroke="rgba(255,255,255,0.5)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="17" cy="30" r="1.8" fill="white"/>
+        <circle cx="27" cy="30" r="1.8" fill="white"/>
+      </svg>
       <div>
-        <div class="cover-logo-text">Dual Income Plus<sup style="font-size:10px">®</sup></div>
-        <div class="cover-logo-tag">one investment property · two incomes</div>
+        <div class="cover-logo-text">Dual Key <span>Partners</span></div>
+        <div class="cover-logo-tag">one block · two incomes</div>
       </div>
     </div>
 
-    <div class="cover-badge">Free Playbook</div>
-    <h1>The Dual Key Investment Playbook</h1>
+    <div class="cover-badge">Free Guide</div>
+    <h1>The Dual Key Investment Guide</h1>
     <p class="cover-sub">How Australian investors are generating two separate rental incomes from a single block of land — and why the numbers work better than any other residential strategy.</p>
 
     <div class="cover-stats">
@@ -751,8 +762,8 @@
         <div class="cover-stat-label">Rental income streams<br>from one investment</div>
       </div>
       <div class="cover-stat">
-        <div class="cover-stat-num">30–45%</div>
-        <div class="cover-stat-label">Higher yield than a<br>standard investment property</div>
+        <div class="cover-stat-num">Higher Yield</div>
+        <div class="cover-stat-label">Potential than a standard<br>investment property*</div>
       </div>
       <div class="cover-stat">
         <div class="cover-stat-num">1 Title</div>
@@ -761,16 +772,20 @@
     </div>
   </div>
 
-  <!-- ══ PAGE 1 — WHAT THIS PLAYBOOK COVERS ════════════════════════ -->
+  <!-- ══ PAGE 1 — INTRODUCTION ═════════════════════════════════════ -->
   <div class="page">
     <div class="section-label">Introduction</div>
     <h2>Before You Read Another Investment Article</h2>
 
-    <p class="leader">Most investment property advice assumes the model: one property, one tenant, one income stream. This playbook is about a different approach — and once you understand the numbers, it's hard to look at a standard investment property the same way again.</p>
+    <div class="disclaimer-box">
+      <strong>General Information Only</strong> — This guide is for educational purposes and does not constitute financial product advice, investment advice, or legal advice. All income figures and yield estimates are illustrative examples only and do not represent guaranteed returns. Actual results will vary based on your individual circumstances, location, market conditions, property specifications, and other factors. Before making any investment decision, you should obtain independent advice from a licensed financial adviser, mortgage broker, and solicitor.
+    </div>
+
+    <p class="leader">Most investment property advice assumes the model: one property, one tenant, one income stream. This guide is about a different approach — and once you understand the numbers, it's hard to look at a standard investment property the same way again.</p>
 
     <p>Dual key investing isn't a new idea. But in the current Australian market — where yields on standard rentals are being squeezed, interest rates have risen sharply, and investors are looking for ways to make the numbers stack up — it's becoming one of the most compelling strategies available.</p>
 
-    <p>This playbook covers:</p>
+    <p>This guide covers:</p>
 
     <ul class="checklist">
       <li>Exactly what a dual key property is and how it works</li>
@@ -782,7 +797,7 @@
     </ul>
 
     <div class="highlight-box">
-      <p>If you've already got equity in your home or an existing investment — or you have capital sitting in savings — there's a realistic path to owning a dual key property. This playbook will show you what that path looks like.</p>
+      <p>If you've already got equity in your home or an existing investment — or you have capital sitting in savings — there's a realistic path to owning a dual key property. This guide will show you what that path looks like.</p>
     </div>
   </div>
 
@@ -816,8 +831,8 @@
           <span>Standard residential yield</span>
         </div>
         <div class="compare-income">
-          <div class="compare-income-label">Typical weekly income</div>
-          <div class="compare-income-num">$480 – $620</div>
+          <div class="compare-income-label">Est. weekly income (illustrative)</div>
+          <div class="compare-income-num">$500 – $650</div>
           <div class="compare-income-note">One rent. One income stream.</div>
         </div>
       </div>
@@ -835,16 +850,16 @@
         </div>
         <div class="compare-item">
           <div class="icon">✓</div>
-          <span>Partial income if one side vacates</span>
+          <span>Income continues if one side vacates</span>
         </div>
         <div class="compare-item">
           <div class="icon">✓</div>
-          <span>30–45% higher combined yield</span>
+          <span>Potential for higher combined yield*</span>
         </div>
         <div class="compare-income">
-          <div class="compare-income-label">Typical combined weekly income</div>
-          <div class="compare-income-num">$960 – $1,400</div>
-          <div class="compare-income-note">Two rents. Same block of land.</div>
+          <div class="compare-income-label">Est. combined weekly income (illustrative)</div>
+          <div class="compare-income-num">$980 – $1,130</div>
+          <div class="compare-income-note">Two rents. Same block of land.*</div>
         </div>
       </div>
     </div>
@@ -857,45 +872,45 @@
     <div class="section-label">The Numbers</div>
     <h2>What the Income Looks Like in Practice</h2>
 
-    <p>Let's look at a realistic example from a completed dual key project in a high-growth Australian corridor. This is based on actual rental appraisals — not projections.</p>
+    <p>Here's an illustrative example based on typical rental appraisal ranges for dual key builds in south-east Queensland and regional NSW growth corridors (2024–25). Actual figures will vary by location, property spec, and market conditions.</p>
 
     <table class="income-table">
       <thead>
         <tr>
           <th>Income Source</th>
-          <th style="text-align:right">Weekly Rent</th>
+          <th style="text-align:right">Est. Weekly Rent</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td><strong>Dwelling A</strong> — 3-bed, 2-bath, double garage</td>
-          <td>$620 / week</td>
+          <td>$580 – $650 / wk</td>
         </tr>
         <tr>
           <td><strong>Dwelling B</strong> — 2-bed, 1-bath, single garage</td>
-          <td>$440 / week</td>
+          <td>$400 – $480 / wk</td>
         </tr>
         <tr class="total">
           <td>Combined weekly rental income</td>
-          <td>$1,060 / week</td>
+          <td>$980 – $1,130 / wk</td>
         </tr>
       </tbody>
     </table>
 
-    <p>Compare that to a standard 4-bedroom home on the same block in the same area, which would typically rent for $590–$640/week. The dual key configuration generates approximately <strong>$420–$470 more per week</strong> from the same land cost.</p>
+    <p>Compare that to a standard 4-bedroom home on a similar block, which typically appraises at $560–$650/week in the same markets. The dual key configuration can generate significantly more income from the same land cost — the gap is what makes the strategy compelling.</p>
 
     <div class="numbers-strip">
       <div class="numbers-cell">
-        <div class="numbers-cell-num">$55,000+</div>
-        <div class="numbers-cell-label">Additional gross rental income per year vs a comparable single dwelling</div>
+        <div class="numbers-cell-num">2 Incomes</div>
+        <div class="numbers-cell-label">Two separate rental streams from a single titled property. Income continues if one side is vacant.</div>
       </div>
       <div class="numbers-cell">
-        <div class="numbers-cell-num">6–8%</div>
-        <div class="numbers-cell-label">Typical gross rental yield on a dual key build (vs 3–4% on standard residential)</div>
+        <div class="numbers-cell-num">~6–8%</div>
+        <div class="numbers-cell-label">Indicative gross yield range for dual key builds in strong rental markets (vs ~3–4% on standard homes)*</div>
       </div>
       <div class="numbers-cell">
-        <div class="numbers-cell-num">50%</div>
-        <div class="numbers-cell-label">Reduced vacancy risk — if one side is vacant, you still receive income from the other</div>
+        <div class="numbers-cell-num">½ the Risk</div>
+        <div class="numbers-cell-label">Full vacancy across both dwellings simultaneously is far less likely than with a single investment property</div>
       </div>
     </div>
 
@@ -903,7 +918,7 @@
       <div class="callout-icon">💡</div>
       <div class="callout-body">
         <div class="callout-title">A note on serviceability</div>
-        <div class="callout-text">Lenders assess dual key builds on the combined rental income of both dwellings. This significantly improves your debt serviceability compared to a standard investment property — meaning the same loan amount is easier to service, and in many cases allows you to borrow more than you could for a standard investment.</div>
+        <div class="callout-text">Many lenders assess dual key builds using the combined rental income from both dwellings, which strengthens your debt serviceability position compared to a single-dwelling investment. Lending policies vary — a mortgage broker experienced in construction finance can identify lenders whose criteria suit your situation.</div>
       </div>
     </div>
   </div>
@@ -922,8 +937,8 @@
     <h3>3. Vacancy risk is halved</h3>
     <p>With a standard investment property, a vacant tenancy means zero income. With dual key, a vacancy in one dwelling doesn't stop income from the other. In tight rental markets, full vacancy across both dwellings simultaneously is rare — and your cash flow is far more resilient as a result.</p>
 
-    <h3>4. Two rental streams means stronger serviceability</h3>
-    <p>Australian lenders assess investment properties based on projected rental income. A dual key property with two rental streams presents a significantly stronger serviceability case than a single dwelling — which often means better borrowing capacity and improved loan terms.</p>
+    <h3>4. Two rental streams may improve serviceability</h3>
+    <p>Some Australian lenders will assess dual key builds using the combined rental income from both dwellings, which can present a stronger serviceability position than a single-dwelling investment. Policies differ between lenders — a licensed mortgage broker can help you identify lenders whose criteria suit your situation and advise on borrowing capacity.</p>
 
     <h3>5. Flexibility as your situation changes</h3>
     <p>Dual key properties are structured for adaptability. You can rent both dwellings independently for maximum income, move into one side while renting the other (reducing holding costs dramatically), or position for future subdivision if zoning allows. The asset works in multiple scenarios — not just one.</p>
@@ -967,15 +982,15 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
         </div>
         <h4>Construction Loan Structure</h4>
-        <p>Dual key builds are funded via a construction loan — you draw funds progressively as building milestones are reached, which means you're not paying interest on the full amount from day one. Interest is minimised during the build phase.</p>
+        <p>Dual key builds are funded via a construction loan — you draw funds progressively as building milestones are reached, which means you're not paying interest on the full amount from day one.</p>
       </div>
     </div>
 
     <div class="highlight-box">
-      <p>The playbook isn't a replacement for tailored financial advice — but in our experience, investors who thought they couldn't afford a dual key build have often been surprised by what a mortgage broker with experience in construction finance can structure for them.</p>
+      <p>This guide doesn't replace tailored financial advice — but investors who assumed they couldn't afford a dual key build are often surprised at what a good broker can structure once they understand the combined rental income picture. It's worth the conversation.</p>
     </div>
 
-    <p>In your strategy call with Dual Income Plus, we'll walk through your current position and show you what's realistically achievable given your equity, income, and borrowing capacity. No obligation — just clarity on the numbers.</p>
+    <p>In your strategy call with Dual Key Partners, we'll walk through your current position and show you what's realistically achievable given your equity, income, and borrowing capacity. No obligation — just clarity on what the numbers look like for you.</p>
   </div>
 
   <!-- ══ PAGE 6 — THE PROCESS ═══════════════════════════════════════ -->
@@ -983,14 +998,14 @@
     <div class="section-label">The Process</div>
     <h2>From First Conversation to Tenanted Property</h2>
 
-    <p>One of the most common reasons investors hesitate on dual key is complexity — there are more moving parts than a standard purchase. That's exactly why Dual Income Plus manages the entire process end-to-end. Here's what the journey looks like:</p>
+    <p>One of the most common reasons investors hesitate on dual key is complexity — there are more moving parts than a standard purchase. That's exactly why Dual Key Partners manages the entire process end-to-end. Here's what the journey looks like:</p>
 
     <ul class="process-list">
       <li class="process-item">
         <div class="process-num">1</div>
         <div class="process-content">
           <div class="process-title">Strategy Session</div>
-          <div class="process-desc">We assess your financial position, goals, and timeline. We'll tell you honestly whether dual key is the right fit, what budget you need to work with, and what returns are realistic for your situation. This call is free and obligation-free.</div>
+          <div class="process-desc">We assess your financial position, goals, and timeline. We'll tell you honestly whether dual key is the right fit, what budget you need, and what returns are realistic for your situation. This call is free and obligation-free.</div>
         </div>
       </li>
       <li class="process-item">
@@ -1004,7 +1019,7 @@
         <div class="process-num">3</div>
         <div class="process-content">
           <div class="process-title">Design &amp; Development Approval</div>
-          <div class="process-desc">Our in-house team manages the design brief and coordinates the DA application with council. We know the requirements across Australia's key growth corridors inside out — applications are lodged correctly the first time.</div>
+          <div class="process-desc">Our team manages the design brief and coordinates the DA application with council. We know the requirements across Australia's key growth corridors inside out — applications are lodged correctly the first time.</div>
         </div>
       </li>
       <li class="process-item">
@@ -1018,7 +1033,7 @@
         <div class="process-num">5</div>
         <div class="process-content">
           <div class="process-title">Handover &amp; Tenant Placement</div>
-          <div class="process-desc">On completion, both dwellings are independently inspected and handed over. We coordinate with a local property manager to place quality tenants into both dwellings — ideally before or at settlement — so your income starts immediately.</div>
+          <div class="process-desc">On completion, both dwellings are independently inspected and handed over. We coordinate with a local property manager to place quality tenants — ideally before or at settlement — so your income starts immediately.</div>
         </div>
       </li>
       <li class="process-item">
@@ -1057,8 +1072,19 @@
     </ul>
 
     <div class="highlight-box">
-      <p>When you book a strategy call with Dual Income Plus, bring these questions. We'll work through every one of them with you — and if there's a deal that doesn't stack up, we'll tell you.</p>
+      <p>When you book a strategy call with Dual Key Partners, bring these questions. We'll work through every one of them with you — and if there's a deal that doesn't stack up, we'll say so.</p>
     </div>
+  </div>
+
+  <!-- ══ DISCLAIMER PAGE ══════════════════════════════════════════════ -->
+  <div class="disclaimer-page">
+    <h3>Important Disclaimer</h3>
+    <p>This guide has been prepared by Dual Key Partners for general information and educational purposes only. It does not constitute financial product advice, investment advice, tax advice, or legal advice, and should not be relied upon as such.</p>
+    <p>All income figures, yield estimates, and financial projections included in this guide are illustrative examples only. They are based on indicative market data and do not represent guaranteed returns. Actual results will vary based on your individual circumstances, chosen location, property specifications, market conditions at the time of investment, vacancy rates, and other factors outside of our control.</p>
+    <p>Past performance and historical market data referenced in this guide are not a reliable indicator of future performance. Property values can go down as well as up, and you may receive less than you invest.</p>
+    <p>Before making any investment, borrowing, or financial decision, you should obtain independent advice from professionals licensed to provide that advice in your jurisdiction, including a licensed financial adviser (AFS Licence holder), registered mortgage broker, and solicitor or conveyancer.</p>
+    <p>Dual Key Partners does not hold an Australian Financial Services Licence (AFSL) and does not provide financial product advice. Our role is to provide education, project management, and coordination services in relation to dual key property development. Any guidance we provide in a strategy call or consultation is general in nature only.</p>
+    <p>*Yield and income figures marked with an asterisk are indicative ranges based on typical market appraisals and should not be treated as projections or forecasts.</p>
   </div>
 
   <!-- ══ CTA PAGE ═══════════════════════════════════════════════════ -->
@@ -1081,10 +1107,10 @@
   <!-- ══ FOOTER ═════════════════════════════════════════════════════ -->
   <div class="footer-strip">
     <div>
-      <div class="footer-brand">Dual Income Plus<sup style="font-size:9px">®</sup></div>
-      <div class="footer-tagline">one investment property · two incomes</div>
+      <div class="footer-brand">Dual Key <span>Partners</span></div>
+      <div class="footer-tagline">one block · two incomes</div>
     </div>
-    <a class="footer-url" href="https://dualincomeplus.com.au">dualincomeplus.com.au</a>
+    <a class="footer-url" href="https://dualkeypartners.com.au">dualkeypartners.com.au</a>
   </div>
 
 </div>
