@@ -612,28 +612,34 @@
     document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => observer.observe(el));
 
     // Detect GHL booking completion and redirect to confirmation
+    function goToConfirmation() {
+      const dest = '../confirmation/?' + (name ? 'name=' + encodeURIComponent(name) : '');
+      window.location.href = dest;
+    }
+
     window.addEventListener('message', function(event) {
       const data = event.data;
+      const str = typeof data === 'string' ? data.toLowerCase() : JSON.stringify(data || '').toLowerCase();
       if (
-        (typeof data === 'string' && (
-          data.includes('booking') ||
-          data.includes('confirmed') ||
-          data.includes('appointment') ||
-          data.includes('success')
-        )) ||
-        (typeof data === 'object' && data !== null && (
-          data.event === 'booking_confirmed' ||
-          data.event === 'appointment_booked' ||
-          data.type  === 'booking_confirmed' ||
-          data.type  === 'appointment_booked' ||
-          data.status === 'confirmed' ||
-          data.action === 'booking'
-        ))
+        str.includes('appointmentscheduled') ||
+        str.includes('booking_confirmed') ||
+        str.includes('appointment_booked') ||
+        str.includes('formsubmit') ||
+        str.includes('form_submit') ||
+        str.includes('confirmed') ||
+        str.includes('booked') ||
+        str.includes('success') ||
+        str.includes('scheduled')
       ) {
-        const dest = '../confirmation/?' + (name ? 'name=' + encodeURIComponent(name) : '');
-        window.location.href = dest;
+        goToConfirmation();
       }
     });
+
+    // Fallback: show manual link after 90 seconds on page
+    setTimeout(function() {
+      const fb = document.getElementById('booking-fallback');
+      if (fb) fb.style.display = 'block';
+    }, 90000);
   </script>
 
 </body>

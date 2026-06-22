@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Logo Export</title>
+<style>
+  body { margin: 0; background: #111; display: flex; flex-direction: column; align-items: center; gap: 24px; padding: 30px; font-family: sans-serif; }
+  canvas { display: none; }
+  .preview { border: 2px solid #333; display: block; }
+  button { font-size: 15px; padding: 10px 28px; cursor: pointer; background: #C98A25; color: white; border: none; border-radius: 4px; font-weight: 700; margin-top: 8px; }
+  p { color: white; margin: 0; text-align: center; font-size: 14px; opacity: 0.7; }
+  h3 { color: white; margin: 0; }
+</style>
+</head>
+<body>
+
+<h3 style="font-size:20px">Dual Key Partners — Logo Export</h3>
+
+<canvas id="profile" width="800" height="800"></canvas>
+<canvas id="cover"   width="1640" height="624"></canvas>
+
+<div style="text-align:center">
+  <h3>Profile Picture (800×800 — shown as circle on Facebook)</h3>
+  <img id="previewProfile" class="preview" style="width:320px;height:320px;border-radius:50%">
+  <br>
+  <button onclick="dl('profile','DKP_Logo_Profile.png')">⬇ Download Profile Pic</button>
+</div>
+
+<div style="text-align:center">
+  <h3>Cover Photo (1640×624)</h3>
+  <img id="previewCover" class="preview" style="width:600px;height:228px">
+  <br>
+  <button onclick="dl('cover','DKP_Logo_Cover.png')">⬇ Download Cover Photo</button>
+</div>
+
+<script>
+/* Draw the dual-house icon centred at (cx, cy) with given size */
+function drawHouse(ctx, cx, cy, size) {
+  const s = size;
+  const unitW = s * 0.34;
+  const unitH = s * 0.44;
+  const unitY = cy + s * 0.06;
+  const gap   = s * 0.05;
+
+  // Left unit (blue)
+  ctx.fillStyle = '#1E6098';
+  ctx.beginPath();
+  ctx.roundRect(cx - unitW - gap/2, unitY, unitW, unitH, s * 0.03);
+  ctx.fill();
+
+  // Right unit (gold)
+  ctx.fillStyle = '#C98A25';
+  ctx.beginPath();
+  ctx.roundRect(cx + gap/2, unitY, unitW, unitH, s * 0.03);
+  ctx.fill();
+
+  // Roof
+  const roofPeakY = cy - s * 0.40;
+  const roofBaseY = cy + s * 0.06;
+  const roofLeft  = cx - unitW - gap/2 - s * 0.04;
+  const roofRight = cx + unitW + gap/2 + s * 0.04;
+
+  ctx.strokeStyle = '#FFFFFF';
+  ctx.lineWidth   = s * 0.055;
+  ctx.lineCap     = 'round';
+  ctx.lineJoin    = 'round';
+  ctx.beginPath();
+  ctx.moveTo(roofLeft,  roofBaseY);
+  ctx.lineTo(cx,        roofPeakY);
+  ctx.lineTo(roofRight, roofBaseY);
+  ctx.stroke();
+
+  // Door knobs
+  ctx.fillStyle = 'rgba(255,255,255,0.75)';
+  const knobY = unitY + unitH * 0.62;
+  const knobR = s * 0.033;
+  ctx.beginPath();
+  ctx.arc(cx - gap/2 - knobR * 2, knobY, knobR, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.beginPath();
+  ctx.arc(cx + gap/2 + knobR * 2, knobY, knobR, 0, Math.PI * 2);
+  ctx.fill();
+}
+
+/* ── PROFILE 800×800 ──────────────────────────── */
+(function(){
+  const c   = document.getElementById('profile');
+  const ctx = c.getContext('2d');
+  const W = 800, H = 800;
+
+  // Background
+  const bg = ctx.createLinearGradient(0, 0, 0, H);
+  bg.addColorStop(0, '#1A2C50');
+  bg.addColorStop(1, '#101E3A');
+  ctx.fillStyle = bg;
+  ctx.fillRect(0, 0, W, H);
+
+  // Subtle gold ring
+  ctx.strokeStyle = 'rgba(201,138,37,0.35)';
+  ctx.lineWidth = 8;
+  ctx.beginPath();
+  ctx.arc(W/2, H/2 - 40, 290, 0, Math.PI * 2);
+  ctx.stroke();
+
+  // House icon centred at (400, 310)
+  drawHouse(ctx, 400, 310, 300);
+
+  // Divider
+  ctx.fillStyle = '#C98A25';
+  ctx.fillRect(W/2 - 100, 560, 200, 3);
+
+  // DUAL KEY
+  ctx.fillStyle = '#FFFFFF';
+  ctx.font = '900 72px Montserrat, Arial, sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('DUAL KEY', W/2, 626);
+
+  // PARTNERS
+  ctx.fillStyle = '#C98A25';
+  ctx.font = '700 40px Montserrat, Arial, sans-serif';
+  ctx.fillText('PARTNERS', W/2, 680);
+
+  document.getElementById('previewProfile').src = c.toDataURL();
+})();
+
+/* ── COVER 1640×624 ───────────────────────────── */
+(function(){
+  const c   = document.getElementById('cover');
+  const ctx = c.getContext('2d');
+  const W = 1640, H = 624;
+
+  // Background
+  const bg = ctx.createLinearGradient(0, 0, W, 0);
+  bg.addColorStop(0, '#101E3A');
+  bg.addColorStop(0.6, '#1A2C50');
+  bg.addColorStop(1, '#1E4070');
+  ctx.fillStyle = bg;
+  ctx.fillRect(0, 0, W, H);
+
+  // Subtle diagonal shimmer
+  ctx.strokeStyle = 'rgba(201,138,37,0.08)';
+  ctx.lineWidth = 200;
+  ctx.beginPath();
+  ctx.moveTo(-200, H + 200);
+  ctx.lineTo(W * 0.5, -200);
+  ctx.stroke();
+
+  // House icon centred at (300, 300)
+  drawHouse(ctx, 300, 300, 360);
+
+  // Gold vertical divider
+  ctx.fillStyle = '#C98A25';
+  ctx.fillRect(570, 80, 4, 460);
+
+  // DUAL KEY
+  ctx.fillStyle = '#FFFFFF';
+  ctx.font = '900 108px Montserrat, Arial, sans-serif';
+  ctx.textAlign = 'left';
+  ctx.fillText('DUAL KEY', 620, 248);
+
+  // PARTNERS
+  ctx.fillStyle = '#C98A25';
+  ctx.font = '900 108px Montserrat, Arial, sans-serif';
+  ctx.fillText('PARTNERS', 620, 370);
+
+  // Gold underline
+  ctx.fillStyle = '#C98A25';
+  ctx.fillRect(620, 388, 540, 5);
+
+  // Tagline
+  ctx.fillStyle = 'rgba(255,255,255,0.60)';
+  ctx.font = '400 31px Arial, sans-serif';
+  ctx.fillText('Two Rental Incomes · One Investment Property', 620, 446);
+
+  // Website
+  ctx.fillStyle = 'rgba(255,255,255,0.30)';
+  ctx.font = '400 24px Arial, sans-serif';
+  ctx.fillText('dualkeypartners.com.au', 620, 494);
+
+  document.getElementById('previewCover').src = c.toDataURL();
+})();
+
+function dl(id, filename) {
+  const a = document.createElement('a');
+  a.download = filename;
+  a.href = document.getElementById(id).toDataURL('image/png');
+  a.click();
+}
+</script>
+</body>
+</html>
