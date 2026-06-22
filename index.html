@@ -221,6 +221,63 @@
       color: var(--navy);
     }
     .q-hook-sep { width: 1px; height: 13px; background: var(--border); }
+    .hero-down-arrow {
+      display: block;
+      font-size: 26px;
+      margin: 10px 0 14px;
+      animation: bounceDown 1.3s ease-in-out infinite;
+    }
+
+    /* ━━━━ HOOK BOOK LAYOUT ━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .q-hook-layout { display: block; }
+    .q-hook-book { display: none; }
+    .q-hook-text { text-align: center; }
+    .q-hook-stats { justify-content: center; }
+
+    @media (min-width: 460px) {
+      .q-hook-layout {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 24px;
+      }
+      .q-hook-text { flex: 1; min-width: 0; text-align: left; }
+      .q-hook-stats { justify-content: flex-start; }
+      .q-hook-book {
+        display: block;
+        flex-shrink: 0;
+        width: 130px;
+      }
+    }
+
+    /* ━━━━ FORM POINTER ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .form-pointer {
+      background: var(--bg);
+      padding: 22px 20px 0;
+      text-align: center;
+    }
+    .form-pointer-label {
+      font-family: var(--font-h);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--navy);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .form-pointer-label em { color: var(--gold); font-style: normal; }
+    @keyframes bounceDown {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(6px); }
+    }
+    .form-pointer-arrow {
+      font-size: 22px;
+      display: block;
+      margin-top: 6px;
+      animation: bounceDown 1.3s ease-in-out infinite;
+    }
 
     /* ━━━━ QUIZ SECTION ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
     .quiz-section {
@@ -788,15 +845,58 @@
   <!-- Hook -->
   <div class="q-hook">
     <div class="q-hook-inner">
-      <p class="q-hook-eyebrow">No cost · Instant access · Australia-wide</p>
-      <h1 class="q-hook-h1">One Block.<br><span class="q-hook-accent">Two Rental Incomes.</span></h1>
-      <p class="q-hook-sub">Answer 4 quick questions and we'll send your personalised dual key investment guide — plus a free 30-minute strategy call.</p>
-      <div class="q-hook-stats">
-        <div class="q-hook-stat"><strong>2×</strong> Income streams</div>
-        <div class="q-hook-sep"></div>
-        <div class="q-hook-stat"><strong>1 Title</strong> · Two dwellings</div>
-        <div class="q-hook-sep"></div>
-        <div class="q-hook-stat"><strong>Free</strong> Strategy call</div>
+      <div class="q-hook-layout">
+        <div class="q-hook-text">
+          <p class="q-hook-eyebrow">Free Download · Instant Access · Australia-Wide</p>
+          <h1 class="q-hook-h1"><span class="q-hook-accent">Free Dual Key</span><br>Playbook.</h1>
+          <span class="hero-down-arrow">👇</span>
+          <p class="q-hook-sub">Learn how to generate two rental incomes from one property. Enter your details below and we'll send your free copy instantly.</p>
+          <div class="q-hook-stats">
+            <div class="q-hook-stat"><strong>Free</strong> Download</div>
+            <div class="q-hook-sep"></div>
+            <div class="q-hook-stat"><strong>2×</strong> Rental incomes</div>
+            <div class="q-hook-sep"></div>
+            <div class="q-hook-stat"><strong>+</strong> Strategy call</div>
+          </div>
+        </div>
+        <div class="q-hook-book">
+          <svg viewBox="0 0 200 262" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;filter:drop-shadow(2px 6px 18px rgba(16,30,58,0.32));">
+            <!-- Spine -->
+            <rect x="8" y="12" width="18" height="222" rx="2" fill="#090F1F"/>
+            <!-- Cover shadow -->
+            <rect x="24" y="14" width="162" height="220" rx="3" fill="rgba(0,0,0,0.2)"/>
+            <!-- Front cover -->
+            <rect x="20" y="8" width="162" height="218" rx="3" fill="#1A2C50"/>
+            <!-- Gold top bar -->
+            <rect x="20" y="8" width="162" height="7" rx="3" fill="#C98A25"/>
+            <rect x="20" y="11" width="162" height="4" fill="#C98A25"/>
+            <!-- Gold bottom bar -->
+            <rect x="20" y="219" width="162" height="7" rx="3" fill="#C98A25"/>
+            <rect x="20" y="219" width="162" height="4" fill="#C98A25"/>
+            <!-- Spine gold accent -->
+            <rect x="8" y="12" width="3" height="222" rx="1" fill="#C98A25" opacity="0.45"/>
+            <!-- Key icon -->
+            <circle cx="101" cy="58" r="16" fill="none" stroke="#C98A25" stroke-width="2.2"/>
+            <circle cx="101" cy="58" r="8" fill="none" stroke="#C98A25" stroke-width="2.2"/>
+            <line x1="101" y1="74" x2="101" y2="99" stroke="#C98A25" stroke-width="2.2" stroke-linecap="round"/>
+            <line x1="101" y1="89" x2="112" y2="89" stroke="#C98A25" stroke-width="2.2" stroke-linecap="round"/>
+            <line x1="101" y1="97" x2="109" y2="97" stroke="#C98A25" stroke-width="2.2" stroke-linecap="round"/>
+            <!-- Decorative rule -->
+            <rect x="44" y="115" width="114" height="1.5" rx="0.75" fill="rgba(255,255,255,0.1)"/>
+            <!-- DUAL KEY label -->
+            <text x="101" y="133" font-family="Montserrat,Arial,sans-serif" font-size="10" font-weight="800" fill="rgba(255,255,255,0.85)" text-anchor="middle" letter-spacing="3">DUAL KEY</text>
+            <!-- Gold divider -->
+            <rect x="50" y="140" width="102" height="1.5" rx="0.75" fill="#C98A25"/>
+            <!-- INVESTMENT PLAYBOOK -->
+            <text x="101" y="159" font-family="Montserrat,Arial,sans-serif" font-size="16" font-weight="900" fill="#C98A25" text-anchor="middle" letter-spacing="0.5">INVESTMENT</text>
+            <text x="101" y="178" font-family="Montserrat,Arial,sans-serif" font-size="16" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">PLAYBOOK</text>
+            <!-- Subtitle -->
+            <text x="101" y="197" font-family="Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.45)" text-anchor="middle" letter-spacing="1.5">TWO RENTS · ONE PROPERTY</text>
+            <!-- FREE badge -->
+            <rect x="62" y="206" width="78" height="14" rx="7" fill="#C98A25"/>
+            <text x="101" y="217" font-family="Montserrat,Arial,sans-serif" font-size="7.5" font-weight="800" fill="white" text-anchor="middle" letter-spacing="1.5">FREE DOWNLOAD</text>
+          </svg>
+        </div>
       </div>
     </div>
   </div>
@@ -804,152 +904,30 @@
   <!-- Gold accent -->
   <div class="gold-bar"></div>
 
-  <!-- Quiz -->
+  <!-- Contact Form -->
   <section class="quiz-section">
     <div class="q-box">
       <div class="quiz-card-header">
-        <span class="quiz-card-badge">Free Guide</span>
-        <p class="quiz-card-header-text">One investment property · Two rental incomes</p>
+        <span class="quiz-card-badge">Free Playbook</span>
+        <p class="quiz-card-header-text">Enter your details — takes less than 30 seconds</p>
       </div>
-      <div class="progress-bar">
-        <div class="progress-fill" id="progress" style="width: 25%"></div>
+      <div class="quiz-inner">
+        <div class="quiz-q">Where should we send your free playbook?</div>
+        <div class="field-group">
+          <input class="hp-field" type="text" id="hp_website" name="website" tabindex="-1" autocomplete="off" />
+          <input class="field" type="text"  id="fname"  placeholder="First name"    autocomplete="given-name"  />
+          <input class="field" type="text"  id="lname"  placeholder="Last name"     autocomplete="family-name" />
+          <input class="field" type="email" id="email"  placeholder="Email address" autocomplete="email"       />
+          <input class="field" type="tel"   id="phone"  placeholder="Australian mobile or landline" autocomplete="tel" />
+          <span class="field-error-msg">Please enter a valid Australian phone number (e.g. 0412 345 678)</span>
+        </div>
+        <button class="btn-next" id="btn-step4">
+          SEND MY FREE PLAYBOOK
+          <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5h9M8.5 3.5l4 4-4 4"/></svg>
+        </button>
+        <p class="form-note">🔒 Your details are 100% private. No spam, ever.</p>
       </div>
-
-        <!-- Step 1 -->
-        <div class="quiz-step active" id="step-1">
-          <div class="quiz-inner">
-            <div class="step-label">Step 1 of 4</div>
-            <div class="quiz-q">What's your available investment budget right now?</div>
-            <div class="options" id="options-step1">
-              <label class="option-label" data-value="under-50k">
-                <input type="radio" name="capital" value="under-50k" />
-                <div class="radio-dot"></div>
-                <span class="option-text">Less than $50k</span>
-              </label>
-              <label class="option-label" data-value="50k-100k">
-                <input type="radio" name="capital" value="50k-100k" />
-                <div class="radio-dot"></div>
-                <span class="option-text">$50k – $100k</span>
-              </label>
-              <label class="option-label" data-value="100k-200k">
-                <input type="radio" name="capital" value="100k-200k" />
-                <div class="radio-dot"></div>
-                <span class="option-text">$100k – $200k</span>
-              </label>
-              <label class="option-label" data-value="200k-plus">
-                <input type="radio" name="capital" value="200k-plus" />
-                <div class="radio-dot"></div>
-                <span class="option-text">$200k or more</span>
-              </label>
-            </div>
-            <button class="btn-next" id="btn-step1">
-              NEXT
-              <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5h9M8.5 3.5l4 4-4 4"/></svg>
-            </button>
-          </div>
-        </div>
-
-        <!-- Step DQ -->
-        <div class="quiz-step" id="step-dq">
-          <div class="quiz-inner">
-            <div class="dq-icon">🙏</div>
-            <div class="quiz-q">Let's be upfront with you.</div>
-            <p class="dq-text">Dual key builds typically require a minimum of $100k in available capital. You may not be quite there yet — but the guide is still yours. It'll show you exactly what position to build toward so you're ready when the time comes.</p>
-            <a class="btn-next" href="playbook/" id="dq-playbook-link" style="text-decoration:none;display:flex;">
-              DOWNLOAD THE GUIDE ANYWAY
-              <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5h9M8.5 3.5l4 4-4 4"/></svg>
-            </a>
-            <button class="btn-back" id="btn-back-dq">← Go back</button>
-          </div>
-        </div>
-
-        <!-- Step 2 — Timeline -->
-        <div class="quiz-step" id="step-2">
-          <div class="quiz-inner">
-            <div class="step-label">Step 2 of 4</div>
-            <div class="quiz-q">How soon are you looking to get started?</div>
-            <div class="options" id="options-step2">
-              <label class="option-label" data-value="0-3months">
-                <input type="radio" name="timeline" value="0-3months" />
-                <div class="radio-dot"></div>
-                <span class="option-text">Ready now (0–3 months)</span>
-              </label>
-              <label class="option-label" data-value="3-6months">
-                <input type="radio" name="timeline" value="3-6months" />
-                <div class="radio-dot"></div>
-                <span class="option-text">Researching seriously (3–6 months)</span>
-              </label>
-              <label class="option-label" data-value="6-12months">
-                <input type="radio" name="timeline" value="6-12months" />
-                <div class="radio-dot"></div>
-                <span class="option-text">Planning ahead (6–12 months)</span>
-              </label>
-              <label class="option-label" data-value="12months-plus">
-                <input type="radio" name="timeline" value="12months-plus" />
-                <div class="radio-dot"></div>
-                <span class="option-text">Early stages (12+ months)</span>
-              </label>
-            </div>
-            <button class="btn-next" id="btn-step2">
-              NEXT
-              <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5h9M8.5 3.5l4 4-4 4"/></svg>
-            </button>
-            <button class="btn-back" id="btn-back2">← Go back</button>
-          </div>
-        </div>
-
-        <!-- Step 3 — Goal -->
-        <div class="quiz-step" id="step-3">
-          <div class="quiz-inner">
-            <div class="step-label">Step 3 of 4</div>
-            <div class="quiz-q">What matters most to you as an investor?</div>
-            <div class="options" id="options-step3">
-              <label class="option-label" data-value="cashflow">
-                <input type="radio" name="goal" value="cashflow" />
-                <div class="radio-dot"></div>
-                <span class="option-text">Strong cash flow</span>
-              </label>
-              <label class="option-label" data-value="equity">
-                <input type="radio" name="goal" value="equity" />
-                <div class="radio-dot"></div>
-                <span class="option-text">Equity &amp; long-term wealth</span>
-              </label>
-              <label class="option-label" data-value="both">
-                <input type="radio" name="goal" value="both" />
-                <div class="radio-dot"></div>
-                <span class="option-text">Both of the above</span>
-              </label>
-            </div>
-            <button class="btn-next" id="btn-step3">
-              NEXT
-              <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5h9M8.5 3.5l4 4-4 4"/></svg>
-            </button>
-            <button class="btn-back" id="btn-back3">← Go back</button>
-          </div>
-        </div>
-
-        <!-- Step 4 — Contact -->
-        <div class="quiz-step" id="step-4">
-          <div class="quiz-inner">
-            <div class="step-label">Step 4 of 4</div>
-            <div class="quiz-q">Almost done — where should we send it?</div>
-            <div class="field-group">
-              <input class="hp-field" type="text" id="hp_website" name="website" tabindex="-1" autocomplete="off" />
-              <input class="field" type="text"  id="fname"  placeholder="First name"    autocomplete="given-name"  />
-              <input class="field" type="text"  id="lname"  placeholder="Last name"     autocomplete="family-name" />
-              <input class="field" type="email" id="email"  placeholder="Email address" autocomplete="email"       />
-              <input class="field" type="tel"   id="phone"  placeholder="Australian mobile or landline" autocomplete="tel" />
-              <span class="field-error-msg">Please enter a valid Australian phone number (e.g. 0412 345 678)</span>
-            </div>
-            <button class="btn-next" id="btn-step4">
-              SEND MY FREE GUIDE
-              <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5h9M8.5 3.5l4 4-4 4"/></svg>
-            </button>
-            <button class="btn-back" id="btn-back4">← Go back</button>
-            <p class="form-note">🔒 Your details are 100% private. No spam, ever.</p>
-          </div>
-        </div>
-      </div><!-- /q-box -->
+    </div>
   </section>
 
   <!-- Review Strip -->
@@ -1143,146 +1121,24 @@
 
       <div class="quiz-card reveal" id="quiz-card-b">
         <div class="quiz-card-header">
-          <span class="quiz-card-badge">Free Guide</span>
-          <p class="quiz-card-header-text">One investment property · Two rental incomes</p>
+          <span class="quiz-card-badge">Free Playbook</span>
+          <p class="quiz-card-header-text">Enter your details — takes less than 30 seconds</p>
         </div>
-        <div class="progress-bar">
-          <div class="progress-fill" id="progress-b" style="width: 25%"></div>
-        </div>
-
-        <!-- Step B1 -->
-        <div class="quiz-step active" id="step-b1">
-          <div class="quiz-inner">
-            <div class="step-label">Step 1 of 4</div>
-            <div class="quiz-q">What's your available investment budget right now?</div>
-            <div class="options" id="options-stepb1">
-              <label class="option-label" data-value="under-50k">
-                <input type="radio" name="capital-b" value="under-50k" />
-                <div class="radio-dot"></div>
-                <span class="option-text">Less than $50k</span>
-              </label>
-              <label class="option-label" data-value="50k-100k">
-                <input type="radio" name="capital-b" value="50k-100k" />
-                <div class="radio-dot"></div>
-                <span class="option-text">$50k – $100k</span>
-              </label>
-              <label class="option-label" data-value="100k-200k">
-                <input type="radio" name="capital-b" value="100k-200k" />
-                <div class="radio-dot"></div>
-                <span class="option-text">$100k – $200k</span>
-              </label>
-              <label class="option-label" data-value="200k-plus">
-                <input type="radio" name="capital-b" value="200k-plus" />
-                <div class="radio-dot"></div>
-                <span class="option-text">$200k or more</span>
-              </label>
-            </div>
-            <button class="btn-next" id="btn-stepb1">
-              NEXT
-              <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5h9M8.5 3.5l4 4-4 4"/></svg>
-            </button>
+        <div class="quiz-inner">
+          <div class="quiz-q">Where should we send your free playbook?</div>
+          <div class="field-group">
+            <input class="hp-field" type="text" id="hp_website_b" name="website_b" tabindex="-1" autocomplete="off" />
+            <input class="field" type="text"  id="fname-b" placeholder="First name"    autocomplete="given-name"  />
+            <input class="field" type="text"  id="lname-b" placeholder="Last name"     autocomplete="family-name" />
+            <input class="field" type="email" id="email-b" placeholder="Email address" autocomplete="email"       />
+            <input class="field" type="tel"   id="phone-b" placeholder="Australian mobile or landline" autocomplete="tel" />
+            <span class="field-error-msg">Please enter a valid Australian phone number (e.g. 0412 345 678)</span>
           </div>
-        </div>
-
-        <!-- Step DQ B -->
-        <div class="quiz-step" id="step-dqb">
-          <div class="quiz-inner">
-            <div class="dq-icon">🙏</div>
-            <div class="quiz-q">Let's be upfront with you.</div>
-            <p class="dq-text">Dual key builds typically require a minimum of $100k in available capital. You may not be quite there yet — but the guide is still yours. It'll show you exactly what position to build toward so you're ready when the time comes.</p>
-            <a class="btn-next" href="playbook/" id="dq-playbook-link-b" style="text-decoration:none;display:flex;">
-              DOWNLOAD THE GUIDE ANYWAY
-              <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5h9M8.5 3.5l4 4-4 4"/></svg>
-            </a>
-            <button class="btn-back" id="btn-back-dqb">← Go back</button>
-          </div>
-        </div>
-
-        <!-- Step B2 -->
-        <div class="quiz-step" id="step-b2">
-          <div class="quiz-inner">
-            <div class="step-label">Step 2 of 4</div>
-            <div class="quiz-q">How soon are you looking to get started?</div>
-            <div class="options" id="options-stepb2">
-              <label class="option-label" data-value="0-3months">
-                <input type="radio" name="timeline-b" value="0-3months" />
-                <div class="radio-dot"></div>
-                <span class="option-text">Ready now (0–3 months)</span>
-              </label>
-              <label class="option-label" data-value="3-6months">
-                <input type="radio" name="timeline-b" value="3-6months" />
-                <div class="radio-dot"></div>
-                <span class="option-text">Researching seriously (3–6 months)</span>
-              </label>
-              <label class="option-label" data-value="6-12months">
-                <input type="radio" name="timeline-b" value="6-12months" />
-                <div class="radio-dot"></div>
-                <span class="option-text">Planning ahead (6–12 months)</span>
-              </label>
-              <label class="option-label" data-value="12months-plus">
-                <input type="radio" name="timeline-b" value="12months-plus" />
-                <div class="radio-dot"></div>
-                <span class="option-text">Early stages (12+ months)</span>
-              </label>
-            </div>
-            <button class="btn-next" id="btn-stepb2">
-              NEXT
-              <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5h9M8.5 3.5l4 4-4 4"/></svg>
-            </button>
-            <button class="btn-back" id="btn-backb2">← Go back</button>
-          </div>
-        </div>
-
-        <!-- Step B3 -->
-        <div class="quiz-step" id="step-b3">
-          <div class="quiz-inner">
-            <div class="step-label">Step 3 of 4</div>
-            <div class="quiz-q">What matters most to you as an investor?</div>
-            <div class="options" id="options-stepb3">
-              <label class="option-label" data-value="cashflow">
-                <input type="radio" name="goal-b" value="cashflow" />
-                <div class="radio-dot"></div>
-                <span class="option-text">Strong cash flow</span>
-              </label>
-              <label class="option-label" data-value="equity">
-                <input type="radio" name="goal-b" value="equity" />
-                <div class="radio-dot"></div>
-                <span class="option-text">Equity &amp; long-term wealth</span>
-              </label>
-              <label class="option-label" data-value="both">
-                <input type="radio" name="goal-b" value="both" />
-                <div class="radio-dot"></div>
-                <span class="option-text">Both of the above</span>
-              </label>
-            </div>
-            <button class="btn-next" id="btn-stepb3">
-              NEXT
-              <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5h9M8.5 3.5l4 4-4 4"/></svg>
-            </button>
-            <button class="btn-back" id="btn-backb3">← Go back</button>
-          </div>
-        </div>
-
-        <!-- Step B4 -->
-        <div class="quiz-step" id="step-b4">
-          <div class="quiz-inner">
-            <div class="step-label">Step 4 of 4</div>
-            <div class="quiz-q">Almost done — where should we send it?</div>
-            <div class="field-group">
-              <input class="hp-field" type="text" id="hp_website_b" name="website_b" tabindex="-1" autocomplete="off" />
-              <input class="field" type="text"  id="fname-b" placeholder="First name"    autocomplete="given-name"  />
-              <input class="field" type="text"  id="lname-b" placeholder="Last name"     autocomplete="family-name" />
-              <input class="field" type="email" id="email-b" placeholder="Email address" autocomplete="email"       />
-              <input class="field" type="tel"   id="phone-b" placeholder="Australian mobile or landline" autocomplete="tel" />
-              <span class="field-error-msg">Please enter a valid Australian phone number (e.g. 0412 345 678)</span>
-            </div>
-            <button class="btn-next" id="btn-stepb4">
-              SEND MY FREE GUIDE
-              <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5h9M8.5 3.5l4 4-4 4"/></svg>
-            </button>
-            <button class="btn-back" id="btn-backb4">← Go back</button>
-            <p class="form-note">🔒 Your details are 100% private. No spam, ever.</p>
-          </div>
+          <button class="btn-next" id="btn-stepb4">
+            SEND MY FREE PLAYBOOK
+            <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5h9M8.5 3.5l4 4-4 4"/></svg>
+          </button>
+          <p class="form-note">🔒 Your details are 100% private. No spam, ever.</p>
         </div>
       </div>
     </div>
@@ -1313,78 +1169,7 @@
 
     document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => observer.observe(el));
 
-    /* ── Quiz logic ─────────────────────────────────── */
-    function initQuiz({ cap1Id, opt1Id, timeline2Id, opt2Id, goal3Id, opt3Id, contact4Id, stepDqId,
-                         btn1Id, btn2Id, btn3Id, btn4Id,
-                         back2Id, back3Id, back4Id, backDqId,
-                         progressId, scrollTargetId, submitCallback }) {
-      const cap1    = document.getElementById(cap1Id);
-      const tl2     = document.getElementById(timeline2Id);
-      const goal3   = document.getElementById(goal3Id);
-      const contact4= document.getElementById(contact4Id);
-      const dq      = document.getElementById(stepDqId);
-      const progress= document.getElementById(progressId);
-
-      function bindOptions(containerId) {
-        document.getElementById(containerId).querySelectorAll('.option-label').forEach(label => {
-          label.addEventListener('click', () => {
-            document.getElementById(containerId).querySelectorAll('.option-label').forEach(l => l.classList.remove('selected'));
-            label.classList.add('selected');
-            label.querySelector('input').checked = true;
-            const btn = label.closest('.quiz-inner').querySelector('.btn-next');
-            if (btn) setTimeout(() => btn.click(), 360);
-          });
-        });
-      }
-
-      function requireSelection(containerId, btn) {
-        const checked = document.getElementById(containerId).querySelector('input[type="radio"]:checked');
-        if (!checked) {
-          btn.style.animation = 'none'; btn.offsetHeight; btn.style.animation = 'shake 0.3s ease';
-          return null;
-        }
-        return checked.value;
-      }
-
-      function go(hide, show, pct) {
-        hide.classList.remove('active');
-        show.classList.add('active');
-        if (pct) progress.style.width = pct;
-        if (scrollTargetId) {
-          document.getElementById(scrollTargetId).scrollIntoView({ behavior: 'smooth', block: 'start' });
-        } else {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-      }
-
-      bindOptions(opt1Id);
-      bindOptions(opt2Id);
-      bindOptions(opt3Id);
-
-      document.getElementById(btn1Id).addEventListener('click', () => {
-        const val = requireSelection(opt1Id, document.getElementById(btn1Id));
-        if (!val) return;
-        const isDQ = val === 'under-50k' || val === '50k-100k';
-        go(cap1, isDQ ? dq : tl2, isDQ ? null : '50%');
-      });
-
-      document.getElementById(btn2Id).addEventListener('click', () => {
-        if (!requireSelection(opt2Id, document.getElementById(btn2Id))) return;
-        go(tl2, goal3, '75%');
-      });
-
-      document.getElementById(btn3Id).addEventListener('click', () => {
-        if (!requireSelection(opt3Id, document.getElementById(btn3Id))) return;
-        go(goal3, contact4, '100%');
-      });
-
-      document.getElementById(btn4Id).addEventListener('click', submitCallback);
-
-      document.getElementById(back2Id).addEventListener('click', () => go(tl2, cap1, '25%'));
-      document.getElementById(back3Id).addEventListener('click', () => go(goal3, tl2, '50%'));
-      document.getElementById(back4Id).addEventListener('click', () => go(contact4, goal3, '75%'));
-      document.getElementById(backDqId).addEventListener('click', () => { dq.classList.remove('active'); cap1.classList.add('active'); });
-    }
+    /* ── Form submit ─────────────────────────────────── */
 
     const GHL_WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/KHKwBrVCaVxIL61p2MKp/webhook-trigger/32bb91ba-f23d-4e15-8004-3570fa7fb135';
 
@@ -1473,40 +1258,16 @@
       window.location.href = 'booking/?' + new URLSearchParams({ name: fields.fname });
     }
 
-    initQuiz({
-      cap1Id: 'step-1', opt1Id: 'options-step1',
-      timeline2Id: 'step-2', opt2Id: 'options-step2',
-      goal3Id: 'step-3', opt3Id: 'options-step3',
-      contact4Id: 'step-4', stepDqId: 'step-dq',
-      btn1Id: 'btn-step1', btn2Id: 'btn-step2', btn3Id: 'btn-step3', btn4Id: 'btn-step4',
-      back2Id: 'btn-back2', back3Id: 'btn-back3', back4Id: 'btn-back4', backDqId: 'btn-back-dq',
-      progressId: 'progress',
-      submitCallback() {
-        const fields = validate('fname', 'lname', 'email', 'phone', 'hp_website');
-        if (!fields) return;
-        const capital  = document.querySelector('#options-step1 input[type="radio"]:checked')?.value || '';
-        const timeline = document.querySelector('#options-step2 input[type="radio"]:checked')?.value || '';
-        const goal     = document.querySelector('#options-step3 input[type="radio"]:checked')?.value || '';
-        submitToGHL(fields, capital, document.getElementById('btn-step4'), { timeline, goal });
-      }
+    document.getElementById('btn-step4').addEventListener('click', () => {
+      const fields = validate('fname', 'lname', 'email', 'phone', 'hp_website');
+      if (!fields) return;
+      submitToGHL(fields, '', document.getElementById('btn-step4'));
     });
 
-    initQuiz({
-      cap1Id: 'step-b1', opt1Id: 'options-stepb1',
-      timeline2Id: 'step-b2', opt2Id: 'options-stepb2',
-      goal3Id: 'step-b3', opt3Id: 'options-stepb3',
-      contact4Id: 'step-b4', stepDqId: 'step-dqb',
-      btn1Id: 'btn-stepb1', btn2Id: 'btn-stepb2', btn3Id: 'btn-stepb3', btn4Id: 'btn-stepb4',
-      back2Id: 'btn-backb2', back3Id: 'btn-backb3', back4Id: 'btn-backb4', backDqId: 'btn-back-dqb',
-      progressId: 'progress-b', scrollTargetId: 'quiz-card-b',
-      submitCallback() {
-        const fields = validate('fname-b', 'lname-b', 'email-b', 'phone-b', 'hp_website_b');
-        if (!fields) return;
-        const capital  = document.querySelector('#options-stepb1 input[type="radio"]:checked')?.value || '';
-        const timeline = document.querySelector('#options-stepb2 input[type="radio"]:checked')?.value || '';
-        const goal     = document.querySelector('#options-stepb3 input[type="radio"]:checked')?.value || '';
-        submitToGHL(fields, capital, document.getElementById('btn-stepb4'), { timeline, goal });
-      }
+    document.getElementById('btn-stepb4').addEventListener('click', () => {
+      const fields = validate('fname-b', 'lname-b', 'email-b', 'phone-b', 'hp_website_b');
+      if (!fields) return;
+      submitToGHL(fields, '', document.getElementById('btn-stepb4'));
     });
 
     /* ── FAQ accordion ──────────────────────────────── */
