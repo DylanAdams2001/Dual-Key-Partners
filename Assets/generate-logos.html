@@ -95,30 +95,23 @@ function drawHouse(ctx, cx, cy, size) {
   ctx.fillStyle = bg;
   ctx.fillRect(0, 0, W, H);
 
-  // Subtle gold ring
-  ctx.strokeStyle = 'rgba(201,138,37,0.35)';
-  ctx.lineWidth = 8;
-  ctx.beginPath();
-  ctx.arc(W/2, H/2 - 40, 290, 0, Math.PI * 2);
-  ctx.stroke();
+  // House icon centred at (400, 270)
+  drawHouse(ctx, 400, 270, 280);
 
-  // House icon centred at (400, 310)
-  drawHouse(ctx, 400, 310, 300);
-
-  // Divider
+  // Divider — clearly below circle (circle bottom = 270+210 = 480)
   ctx.fillStyle = '#C98A25';
-  ctx.fillRect(W/2 - 100, 560, 200, 3);
+  ctx.fillRect(W/2 - 110, 520, 220, 3);
 
   // DUAL KEY
   ctx.fillStyle = '#FFFFFF';
   ctx.font = '900 72px Montserrat, Arial, sans-serif';
   ctx.textAlign = 'center';
-  ctx.fillText('DUAL KEY', W/2, 626);
+  ctx.fillText('DUAL KEY', W/2, 598);
 
   // PARTNERS
   ctx.fillStyle = '#C98A25';
   ctx.font = '700 40px Montserrat, Arial, sans-serif';
-  ctx.fillText('PARTNERS', W/2, 680);
+  ctx.fillText('PARTNERS', W/2, 656);
 
   document.getElementById('previewProfile').src = c.toDataURL();
 })();
@@ -175,7 +168,7 @@ function drawHouse(ctx, cx, cy, size) {
   // Website
   ctx.fillStyle = 'rgba(255,255,255,0.30)';
   ctx.font = '400 24px Arial, sans-serif';
-  ctx.fillText('dualkeypartners.com.au', 620, 494);
+  ctx.fillText('dualkeypartners.com', 620, 494);
 
   document.getElementById('previewCover').src = c.toDataURL();
 })();
